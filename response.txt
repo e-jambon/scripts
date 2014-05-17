@@ -1,0 +1,613 @@
+/:iNet::HTTP
+**********************
+**    RESPONSE :    **
+**********************
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rocking Links</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="alternate" type="application/rss+xml" href="http://links.e-jambon.com/?do=rss" title="RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="http://links.e-jambon.com/?do=atom" title="ATOM Feed">
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="inc/shaarli.css?version=0.0.41+beta">
+
+<script src="inc/jquery.min.js"></script><script src="inc/jquery-ui.min.js"></script>
+</head>
+<body onload="document.loginform.login.focus();">
+<div id="pageheader">
+	
+    <div id="logo" title="Share your links !" onclick="document.location='?';"></div>
+    <div style="float:right; font-style:italic; color:#bbb; text-align:right; padding:0 5 0 0;" class="nomobile">Shaare your links...<br>
+        </div>
+    <span id="shaarli_title"><a href="?">Rocking Links</a></span>
+  
+
+    <a href="?" class="nomobile">Home</a>
+    
+        <a href="?do=login">Login</a>
+    
+    <a href="http://links.e-jambon.com/?do=rss" class="nomobile">RSS Feed</a>
+    <a href="http://links.e-jambon.com/?do=atom" style="padding-left:10px;" class="nomobile">ATOM Feed</a>
+    <a href="?do=tagcloud">Tag cloud</a>
+    <a href="?do=picwall">Picture wall</a>
+    <a href="?do=daily">Daily</a>
+
+    <div class="clear"></div>
+
+
+
+
+	<div id="headerform">
+
+    <form method="post" name="loginform">
+    Login: <input type="text" name="login" tabindex="1">   
+    Password : <input type="password" name="password" tabindex="2">
+    <input type="submit" value="Login" class="bigbutton" tabindex="4"><br>
+    <input style="margin:10 0 0 40;" type="checkbox" name="longlastingsession" id="longlastingsession" tabindex="3"><label for="longlastingsession"> Stay signed in (Do not check on public computers)</label>
+    <input type="hidden" name="token" value="40d31a167d388636bbdd4f4e91dcfe06c13c8851">
+    
+    </form>
+
+    </div>
+</div>
+
+<div id="footer">
+    <b><a href="http://sebsauvage.net/wiki/doku.php?id=php:shaarli">Shaarli 0.0.41 beta</a></b> - The personal, minimalist, super-fast, no-database delicious clone. By <a href="http://sebsauvage.net" target="_blank">sebsauvage.net</a>. Theme by <a href="http://blog.idleman.fr" target="_blank">idleman.fr</a>.
+</div>
+
+
+
+
+
+</body>
+</html>
+**********************
+**    TOKEN :       **
+**********************
+40d31a167d388636bbdd4f4e91dcfe06c13c8851
+**********************
+**    RESPONSE :    **
+**********************
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rocking Links</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="alternate" type="application/rss+xml" href="http://links.e-jambon.com/?do=rss" title="RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="http://links.e-jambon.com/?do=atom" title="ATOM Feed">
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="inc/shaarli.css?version=0.0.41+beta">
+
+<script src="inc/jquery.min.js"></script><script src="inc/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="pageheader">
+	
+    <div id="logo" title="Share your links !" onclick="document.location='?';"></div>
+    <div style="float:right; font-style:italic; color:#bbb; text-align:right; padding:0 5 0 0;" class="nomobile">Shaare your links...<br>
+        201 links</div>
+    <span id="shaarli_title"><a href="?">Rocking Links</a></span>
+  
+
+    <a href="?" class="nomobile">Home</a>
+    
+        <a href="?do=login">Login</a>
+    
+    <a href="http://links.e-jambon.com/?do=rss" class="nomobile">RSS Feed</a>
+    <a href="http://links.e-jambon.com/?do=atom" style="padding-left:10px;" class="nomobile">ATOM Feed</a>
+    <a href="?do=tagcloud">Tag cloud</a>
+    <a href="?do=picwall">Picture wall</a>
+    <a href="?do=daily">Daily</a>
+
+    <div class="clear"></div>
+
+
+
+	<div id="headerform" style="width:100%; white-space:nowrap;">
+	    <form method="GET" class="searchform" name="searchform" style="display:inline;">
+<input type="text" id="searchform_value" name="searchterm" style="width:30%" value=""> <input type="submit" value="Search" class="bigbutton">
+</form>
+	    <form method="GET" class="tagfilter" name="tagfilter" style="display:inline;margin-left:24px;">
+<input type="text" name="searchtags" id="tagfilter_value" style="width:10%" value=""> <input type="submit" value="Filter by tag" class="bigbutton">
+</form>
+	</div>
+</div>
+
+<div id="linklist">
+
+    <div class="paging">
+
+    <div id="paging_linksperpage">
+        Links per page: <a href="?linksperpage=20">20</a> <a href="?linksperpage=50">50</a> <a href="?linksperpage=100">100</a>
+        <form method="GET" style="display:inline;" class="linksperpage"><input type="text" name="linksperpage" size="2" style="height:15px;"></form>
+    </div>
+     <a href="?page=2" id="paging_older">◄Older</a> 
+    <div id="paging_current">page 1 / 11 </div>
+    
+</div>
+
+    
+        
+        
+    
+    <ul>
+        
+        <li class="publicLinkHightLight">
+            <a name="iNCT-Q" id="iNCT-Q"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://www.playdeb.net/updates/Ubuntu/14.04">PlayDeb.net - Updates for Ubuntu 14.04</a></span>
+                <br>
+                <div class="linkdescription">No need to describe : game  packages for ubuntu</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?iNCT-Q">Tue 13 May 2014 01:54:14 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FiNCT-Q&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://www.playdeb.net/updates/Ubuntu/14.04</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=ubuntu">ubuntu</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="JCb1gg" id="JCb1gg"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://www.getdeb.net/welcome/">GetDeb.net V2 - Software for Ubuntu Linux - Welcome</a></span>
+                <br>
+                <div class="linkdescription">Parce que parfois, trouver un fichier pré-compilé pour installer un logiciel quelconque, ça peut s'avérer très pratique, même sous Ubuntu</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?JCb1gg">Tue 13 May 2014 01:39:30 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FJCb1gg&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://www.getdeb.net/welcome/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=ubuntu">ubuntu</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li class="publicLinkHightLight">
+            <a name="Iz-38w" id="Iz-38w"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://pcottle.github.io/learnGitBranching/">Learn Git Branching</a></span>
+                <br>
+                <div class="linkdescription">Un tuto très très chouette.<br>
+Vraiment bien foutu,  simple, efficace.<br>
+A suivre dès qu'on s'est familiarisé avec les premières commandes de git, pour comprendre branch/merge/checkout...etc<br>
+J'ai beaucoup aimé.</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?Iz-38w">Sun 11 May 2014 07:49:06 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FIz-38w&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://pcottle.github.io/learnGitBranching/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=Git">Git</a></span> <span class="linktag" title="Add tag"><a href="?addtag=tutoriel">tutoriel</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="Y4st7w" id="Y4st7w"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a></span>
+                <br>
+                <div class="linkdescription">Y'a de la ressource, là dessous.<br>
+Sous le capot, tout un réseau qui propose une base de connaissance. <br>
+C'est...gigantesque.</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?Y4st7w">Sat 10 May 2014 11:19:38 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FY4st7w&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">https://developer.mozilla.org/en-US/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=css">css</a></span> <span class="linktag" title="Add tag"><a href="?addtag=htl">htl</a></span> <span class="linktag" title="Add tag"><a href="?addtag=mozilla">mozilla</a></span> <span class="linktag" title="Add tag"><a href="?addtag=webdesign">webdesign</a></span> <span class="linktag" title="Add tag"><a href="?addtag=Webmaster">Webmaster</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li class="publicLinkHightLight">
+            <a name="bJJzlw" id="bJJzlw"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://css-tricks.com/snippets/">Code Snippets | CSS-Tricks</a></span>
+                <br>
+                <div class="linkdescription">Tout le monde doit connaître, sauf moi bien sûr ;p<br>
+CSS tricks / snippets  c'est un peu comme une petite liste de recettes</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?bJJzlw">Sat 10 May 2014 11:09:19 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FbJJzlw&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://css-tricks.com/snippets/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=css">css</a></span> <span class="linktag" title="Add tag"><a href="?addtag=html">html</a></span> <span class="linktag" title="Add tag"><a href="?addtag=snippets">snippets</a></span> <span class="linktag" title="Add tag"><a href="?addtag=webdesign">webdesign</a></span> <span class="linktag" title="Add tag"><a href="?addtag=webmaster">webmaster</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="B33prA" id="B33prA"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="https://github.com/tiimgreen/github-cheat-sheet">Git Cheat Sheet</a></span>
+                <br>
+                <div class="linkdescription">Un dépôt "Memo Git", avec beaucoup de trucs, astuces pour Git.<br>
+Très bon.</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?B33prA">Fri 09 May 2014 08:39:15 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FB33prA&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">https://github.com/tiimgreen/github-cheat-sheet</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=git">git</a></span> <span class="linktag" title="Add tag"><a href="?addtag=programmation">programmation</a></span> <span class="linktag" title="Add tag"><a href="?addtag=utilitaires">utilitaires</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li class="publicLinkHightLight">
+            <a name="bOpwjA" id="bOpwjA"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application#getting-started-with-rails">Build a Simple Ruby on Rails Application Project</a></span>
+                <br>
+                <div class="linkdescription">rails tuto</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?bOpwjA">Wed 07 May 2014 09:59:35 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FbOpwjA&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application#getting-started-with-rails</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=rails">rails</a></span> <span class="linktag" title="Add tag"><a href="?addtag=tutoriels">tutoriels</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="GFjgSw" id="GFjgSw"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://installfest.railsbridge.org/installfest/choose_your_operating_system?back=installfest">Choose Your Operating System - Installfest</a></span>
+                <br>
+                <div class="linkdescription">Instruction pour l'installation d'un environnement rails<br>
+Linux / OSX / Windows</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?GFjgSw">Wed 07 May 2014 09:56:22 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FGFjgSw&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://installfest.railsbridge.org/installfest/choose_your_operating_system?back=installfest</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=IT">IT</a></span> <span class="linktag" title="Add tag"><a href="?addtag=rails">rails</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li class="publicLinkHightLight">
+            <a name="gq0alQ" id="gq0alQ"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://jsfiddle.net/">JSFiddle - editeur HTML / CSS / Javascript + preview</a></span>
+                <br>
+                <div class="linkdescription">Un éditeur en ligne.</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?gq0alQ">Wed 07 May 2014 09:01:10 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3Fgq0alQ&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://jsfiddle.net/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=webdesign">webdesign</a></span> <span class="linktag" title="Add tag"><a href="?addtag=webmaster">webmaster</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="wJ5zIQ" id="wJ5zIQ"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://codepen.io/pen/">CodePen - Pen</a></span>
+                <br>
+                <div class="linkdescription">Mini éditeur HTML/CSS/JS avec preview + enregistrement, en ligne. <br>
+Coloration syntaxique intégrée.<br>
+Les œuvres de chacun sont consultables, voir même réutilisables. Bon on sait jamais, ça peut servir.</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?wJ5zIQ">Wed 07 May 2014 08:58:55 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FwJ5zIQ&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://codepen.io/pen/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=webdesign">webdesign</a></span> <span class="linktag" title="Add tag"><a href="?addtag=webmaster">webmaster</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li class="publicLinkHightLight">
+            <a name="gf0M5A" id="gf0M5A"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://www.smashingmagazine.com/2009/05/21/web-design-industry-jargon-glossary-and-resources/">Web Design Industry Jargon: Glossary and Resources | Smashing Magazine</a></span>
+                <br>
+                <div class="linkdescription">Le jargon du web design.<br>
+Ca m'a l'air plutôt pas mal foutu.</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?gf0M5A">Wed 07 May 2014 08:46:51 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3Fgf0M5A&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://www.smashingmagazine.com/2009/05/21/web-design-industry-jargon-glossary-and-resources/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=webdesign">webdesign</a></span> <span class="linktag" title="Add tag"><a href="?addtag=webmaster">webmaster</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="Garb_w" id="Garb_w"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://www.pragtob.info/rails-beginner-cheatsheet/index.html">Rails Cheat Sheet</a></span>
+                <br>
+                <div class="linkdescription">Parce que je ne me souviens pas toujours de tout....</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?Garb_w">Wed 07 May 2014 08:38:52 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FGarb_w&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://www.pragtob.info/rails-beginner-cheatsheet/index.html</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=rails">rails</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li class="publicLinkHightLight">
+            <a name="CJ0i7Q" id="CJ0i7Q"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://conqueringthecommandline.com/book/basics">Conquering the Command Line | Softcover.io</a></span>
+                <br>
+                <div class="linkdescription">Livre en ligne sur la ligne de commande</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?CJ0i7Q">Wed 07 May 2014 08:35:54 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FCJ0i7Q&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://conqueringthecommandline.com/book/basics</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=bash">bash</a></span> <span class="linktag" title="Add tag"><a href="?addtag=command">command</a></span> <span class="linktag" title="Add tag"><a href="?addtag=console">console</a></span> <span class="linktag" title="Add tag"><a href="?addtag=livres">livres</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="niIkDg" id="niIkDg"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="https://trello.com/">Trello</a></span>
+                <br>
+                <div class="linkdescription">Encore une appli organizer.<br>
+Genre kaban multimedia &amp; un peu de social network... si j'ai bien tout compris l'idée.<br>
+A voir.</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?niIkDg">Wed 07 May 2014 05:50:57 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FniIkDg&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">https://trello.com/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=webservice">webservice</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li class="publicLinkHightLight">
+            <a name="AoZXZw" id="AoZXZw"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://l3net.wordpress.com/2013/03/17/a-memory-comparison-of-light-linux-desktops/">A Memory Comparison of Light Linux Desktops | l3net – a layer 3 networking blog</a></span>
+                <br>
+                <div class="linkdescription">Un comparatif sur les gestionnaires de fenêtrage pour Linux.</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?AoZXZw">Sun 04 May 2014 05:36:41 PM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FAoZXZw&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://l3net.wordpress.com/2013/03/17/a-memory-comparison-of-light-linux-desktops/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=desktop">desktop</a></span> <span class="linktag" title="Add tag"><a href="?addtag=linux">linux</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="1n1IIw" id="1n1IIw"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://www.openvim.com/tutorial.html">Interactive Vim tutorial</a></span>
+                <br>
+                <div class="linkdescription">Un tutoriel interactif pour apprendre à utiliser vim</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?1n1IIw">Sat 03 May 2014 10:09:04 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3F1n1IIw&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://www.openvim.com/tutorial.html</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=tutoriels">tutoriels</a></span> <span class="linktag" title="Add tag"><a href="?addtag=vim">vim</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li class="publicLinkHightLight">
+            <a name="B9MdFA" id="B9MdFA"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://www.enfr.org/world/">En Français</a></span>
+                <br>
+                <div class="linkdescription">Site avec beaucoup d'informations sur l'émmigration aux EUA / Australie</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?B9MdFA">Sat 03 May 2014 06:18:39 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FB9MdFA&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://www.enfr.org/world/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=emmigration">emmigration</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="1C1c1w" id="1C1c1w"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="https://code.facebook.com/projects/">Project Directory | Open Source | Facebook Code | Facebook</a></span>
+                <br>
+                <div class="linkdescription">Les projets open-source de facebook.<br>
+Mis de côté pour investigations ultérieures.<br>
+Il y a beaucoup de projets, dont open-compute soit dit en passant.</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?1C1c1w">Wed 30 Apr 2014 02:07:06 AM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3F1C1c1w&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">https://code.facebook.com/projects/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=open-source">open-source</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li class="publicLinkHightLight">
+            <a name="UBdFGg" id="UBdFGg"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="https://gumroad.com/">Gumroad</a></span>
+                <br>
+                <div class="linkdescription">Une solution pour permettre le paiement en ligne de la manière la plus simple qui soit. La contrepartie est quand même de 5% + 26cents par vente.<br>
+Mais bon, ça a l'air tellement simple que pour des petits projets, ça peut valoir le coup.<br>
+Je n'ai pas testé, mais je me garde ça sous le coude pour le jour ou...</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?UBdFGg">Tue 29 Apr 2014 11:17:02 PM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FUBdFGg&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">https://gumroad.com/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=commerces">commerces</a></span> <span class="linktag" title="Add tag"><a href="?addtag=paiements">paiements</a></span> <span class="linktag" title="Add tag"><a href="?addtag=service">service</a></span> <span class="linktag" title="Add tag"><a href="?addtag=ventes">ventes</a></span> <span class="linktag" title="Add tag"><a href="?addtag=web">web</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+        <li>
+            <a name="iV7EPg" id="iV7EPg"></a>
+            <div class="thumbnail"></div>
+            <div class="linkcontainer">
+                
+                <span class="linktitle"><a href="http://code.nasa.gov/project/">Projects | code.nasa.gov</a></span>
+                <br>
+                <div class="linkdescription">Les projets open-source de la nasa</div>
+                
+                    <span class="linkdate" title="Permalink"><a href="?iV7EPg">Tue 29 Apr 2014 08:34:43 PM CEST - permalink</a> - </span>
+                
+                <div style="position:relative;display:inline;"><a href="http://invx.com/code/qrcode/?code=http%3A%2F%2Flinks.e-jambon.com%2F%3FiV7EPg&amp;width=200&amp;height=200" onclick="return false;" class="qrcode"><img src="images/qrcode.png" width="13" height="13" title="QR-Code"></a></div> - 
+                <span class="linkurl" title="Short link">http://code.nasa.gov/project/</span><br>
+                
+                    <div class="linktaglist">
+                    <span class="linktag" title="Add tag"><a href="?addtag=code">code</a></span> <span class="linktag" title="Add tag"><a href="?addtag=NASA">NASA</a></span> <span class="linktag" title="Add tag"><a href="?addtag=open-source">open-source</a></span> 
+                    </div>
+                
+            </div>
+        </li>
+    
+    </ul>
+
+    <div class="paging">
+
+    <div id="paging_linksperpage">
+        Links per page: <a href="?linksperpage=20">20</a> <a href="?linksperpage=50">50</a> <a href="?linksperpage=100">100</a>
+        <form method="GET" style="display:inline;" class="linksperpage"><input type="text" name="linksperpage" size="2" style="height:15px;"></form>
+    </div>
+     <a href="?page=2" id="paging_older">◄Older</a> 
+    <div id="paging_current">page 1 / 11 </div>
+    
+</div>
+
+</div>
+
+    <div id="footer">
+    <b><a href="http://sebsauvage.net/wiki/doku.php?id=php:shaarli">Shaarli 0.0.41 beta</a></b> - The personal, minimalist, super-fast, no-database delicious clone. By <a href="http://sebsauvage.net" target="_blank">sebsauvage.net</a>. Theme by <a href="http://blog.idleman.fr" target="_blank">idleman.fr</a>.
+</div>
+
+
+
+
+
+    
+<script>
+$(document).ready(function() {
+	$('a.qrcode').click(function(){
+	  hide_qrcode();
+	  var link = $(this).attr('href');
+	  $(this).after('<div class="qrcode" onclick="hide_qrcode();return false;"><img src="'+link+'" width="200" height="200"><br>click to close</div>');
+	});
+});
+function hide_qrcode() { $('div.qrcode').remove(); }
+</script>
+
+</body>
+</html>

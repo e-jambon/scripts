@@ -1,0 +1,131 @@
+#!/usr/bin/env ruby
+# encoding : utf-8
+
+require 'net/http'
+require 'rubygems'
+require 'nokogiri'
+
+
+#==============================================
+#CONFIGURATION. -- edit and put your own values
+#==============================================
+# username = "shaarli_user_name" 
+# You must here put the user name of your shaarli
+# replace shaarli_user_name with your own.Leave the quotes
+USERNAME = 'ygueron'
+
+# password = "shaarli_password"
+# You must here set the password you have defined in your shaarli
+# replace shaarli_password with your own.Leave the quotes
+PASSWORD = 'lol'
+
+# shaarli_url = "your_shaarli_url"
+# Here, you set your shaarli URL, as in weActionDispatchb adress
+# wich should looks like :  "myshaarli.mydomain.net"
+# without the protocole header (http://)
+SHAARLI_HOST = 'localhost'
+
+
+
+# SHAARLI_PATH = "Your shaarli path on your domain"
+# Here, you set the shaarli PATH, as in the folder
+# on wich you access your shaarli. For example, if your 
+# shaarli web adress is http:///arkam.mydomain.net/folderone/foldertwo/
+# you will set the SHAARLI_PATH to /folderone/foldertwo
+SHAARLI_PATH = '/links/'
+
+# langage = :fr
+# this value is set to either :fr or :en
+# :fr for french or :en for english. 
+# That indicates the langaged used for the display
+LANGAGE = :fr #possible values are either :fr or :en, so far
+
+
+
+#=========================================
+# MODIFY THE FOLLOWING AT YOUR OWN RISKS
+#=========================================
+
+#load langage accordingly to the langage variable
+case LANGAGE
+	when :fr then require_relative './postlink_strings_fr.rb' 
+  when :en then require_relative './postlink_strings_en.rb'
+  else
+    raise "Unknown langage was set. Can't resolve. Please check your configuration"
+end
+
+class PostLink
+
+attr_accessor :title, :link_url_to_post,
+				:privacy, :description,
+				:response, :uri, :token, :query
+
+	public
+	def initialize
+
+	end
+
+	def do_login
+
+
+    uri = URI("http://#{SHAARLI_HOST}#{SHAARLI_PATH}?do=login")
+    params ={}
+    params['login'] = USERNAME
+    params['password'] = PASSWORD
+    params['token'] =''
+    puts "#{uri.to_s}"
+    # First thing we need to do : get the login form to extract the token.
+    response = Net::HTTP.get_response(uri)
+    display_response(response.body)
+    @token = extract_token(response.body)
+    raise ("The token was not found") unless ! @token.nil?
+    params['token'] = "#{@token}"
+
+
+    # Now we have the token, we are going to post the answer.
+    # The POST should be x-www-urlencoded.
+    # I will set the header so say just that, although I believe that probably is the default.
+
+    login_request = Net::HTTP::Post.new(uri.path)
+    login_request.set_form_data(params)
+    login_response = Net::HTTP.start(uri.hostname, uri.port) do |http|
+        http.request(login_request)
+      end
+
+    display_response(login_response.body)
+
+
+
+
+    # TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    # TODO @@@@ MAKE SURE WE ARE LOGGED IN : NEITHER BANNED NOR WRONG LOGIN/PASSWORD MESSAGE INCLUDED @@@@
+    # TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+  end
+
+  def display_response resp_body
+    html =  Nokogiri::HTML(resp_body)
+    puts "**********************"
+    puts "**    RESPONSE :    **"
+    puts "**********************"
+    puts "#{html}"
+  end
+
+  def extract_token resp_body
+    html =  Nokogiri::HTML(resp_body)
+    token = html.css("form input[name='token']")[0]["value"]
+    puts "**********************"
+    puts "**    TOKEN :       **"
+    puts "**********************"
+    puts "#{token}"
+    token
+  end
+
+end
+
+newlink = PostLink.new
+newlink.do_login
+
+
+

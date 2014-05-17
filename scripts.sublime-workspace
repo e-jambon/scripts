@@ -1,0 +1,589 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"SA",
+				"SHAARLI_PATH"
+			],
+			[
+				"SHA",
+				"SHAARLI_HOST"
+			],
+			[
+				"SHAARL",
+				"SHAARLI_PATH"
+			],
+			[
+				"P",
+				"PASSWORD"
+			],
+			[
+				"e",
+				"ea	each { |e| .. }"
+			],
+			[
+				"cla",
+				"cla	class .. initialize .. end"
+			],
+			[
+				"c",
+				"cla	class BlankSlate .. initialize .. end"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/media/ygueron/DOCS/BUREAUTIQUE/COURS_EDX_169-1/oracle_of_bacon.rb",
+			"settings":
+			{
+				"buffer_size": 2758,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "shaarlyp.py",
+			"settings":
+			{
+				"buffer_size": 3230,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 75.0,
+		"selected_items":
+		[
+			[
+				"commen",
+				"Toggle Block Comment"
+			],
+			[
+				"comm",
+				"Toggle Block Comment"
+			],
+			[
+				"comment",
+				"Toggle Block Comment"
+			],
+			[
+				"m",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"Lint",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"lint",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"package list",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"MD",
+				"Markdown Preview: Github Flavored Markdown: Export HTML in Sublime Text"
+			],
+			[
+				"Preview",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"preview",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"md pr",
+				"Markdown Preview: Python Markdown: Export HTML in Sublime Text"
+			],
+			[
+				"mark",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"mdc",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"packrem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Packa in",
+				"Package Control: Install Package"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"err",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"lint erro",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"mar",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"opbr",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"mkdprv",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"markd",
+				"Markdown Preview: Python Markdown: Copy to Clipboard"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"xi",
+				"Preferences: SublimeXiki Settings – Default"
+			],
+			[
+				"tasd",
+				"Tasks: New document"
+			],
+			[
+				"Gist",
+				"Gist: Open Gist"
+			],
+			[
+				"gi",
+				"Gist: Open Gist"
+			],
+			[
+				"Gist Open",
+				"Gist: Open Gist"
+			],
+			[
+				"create",
+				"Gist: Create Public Gist"
+			],
+			[
+				"gist",
+				"Gist: Insert Gist"
+			],
+			[
+				"synru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				":q",
+				"Set Syntax: SQL"
+			],
+			[
+				":e",
+				":e - Revert"
+			],
+			[
+				":0",
+				":0 - BOF"
+			],
+			[
+				":$",
+				":$ - EOF"
+			]
+		],
+		"width": 647.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"quit",
+			"exit",
+			".clear",
+			"clear",
+			"$version",
+			"$versionv",
+			"version"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/ygueron/bin/scripts/postlink",
+		"/home/ygueron/Documents/e-jambon.com/links/ipbans.php",
+		"/media/ygueron/DOCS/BUREAUTIQUE/COURS_EDX_169-1/oracle_of_bacon.rb",
+		"/home/ygueron/Documents/e-jambon.com/links/README.md",
+		"/home/ygueron/bin/scripts/shaarlyp.py",
+		"/home/ygueron/work/169/HW1/lib/attr_accessor_with_history.rb",
+		"/home/ygueron/work/169/HW1/lib/dessert.rb",
+		"/home/ygueron/work/169/HW1/lib/fun_with_strings.rb",
+		"/home/ygueron/work/169/HW1/.rspec",
+		"/home/ygueron/work/169/HW0/lib/HW0part1.rb",
+		"/home/ygueron/work/ToP/euler/pb_03.rb",
+		"/home/ygueron/work/169/HW1/ruby-calisthenics/lib/dessert.rb",
+		"/home/ygueron/work/169/169.sublime-project",
+		"/home/ygueron/work/169/HW1/ruby-calisthenics/lib/rock_paper_scissors.rb",
+		"/home/ygueron/work/169/HW1/public/lib/rock_paper_scissors.rb",
+		"/home/ygueron/work/169/HW1/ruby-calisthenics/spec/rock_paper_scissors_spec.rb",
+		"/home/ygueron/work/169/HW1/ruby-calisthenics/spec/fun_with_strings_spec.rb",
+		"/home/ygueron/work/169/HW1/ruby-calisthenics/lib/fun_with_strings.rb",
+		"/home/ygueron/work/169/HW1/ruby-calisthenics/spec/dessert_spec.rb",
+		"/home/ygueron/work/169/HW1/public/lib/attr_accessor_with_history.rb",
+		"/home/ygueron/work/169/HW1/ruby-calisthenics/lib/attr_accessor_with_history.rb",
+		"/home/ygueron/work/169/HW1/ruby-calisthenics/spec/attr_accessor_with_history_spec.rb",
+		"/home/ygueron/work/169/HW1/public/spec/attr_accessor_with_history_spec.rb",
+		"/home/ygueron/work/169/HW1/public/spec/rock_paper_scissors_spec.rb",
+		"/home/ygueron/work/169/HW1/public/spec/fun_with_strings_spec.rb",
+		"/home/ygueron/work/169/HW1/public/spec/dessert_spec.rb",
+		"/home/ygueron/bin/scripts/yg_test",
+		"/home/ygueron/work/169/HW1/public/lib/fun_with_strings.rb",
+		"/home/ygueron/bin/scripts/postlink_strings_fr.rb",
+		"/home/ygueron/.profile",
+		"/home/ygueron/bin/scripts/ygtest",
+		"/home/ygueron/work/ToP/euler/pb_01.rb",
+		"/home/ygueron/work/ToP/euler/pb_02.rb",
+		"/home/ygueron/work/169/HW0/single/rb1.rb",
+		"/home/ygueron/bin/scripts/shaarli.rb",
+		"/etc/login.defs",
+		"/home/ygueron/.bashrc",
+		"/home/ygueron/bashrc",
+		"/home/ygueron/bin/scripts/shaarli.Rb",
+		"/home/ygueron/work/169/HW1/public/lib/dessert.rb",
+		"/home/ygueron/bin/scripts/post-link.rb",
+		"/home/ygueron/bin/scripts/.shaarlyp.rb",
+		"/home/ygueron/Téléchargements/old_HW0_3.rb",
+		"/home/ygueron/work/169/HW0/lib/HW0part2.rb",
+		"/home/ygueron/work/169/HW0/lib/HW0part3.rb",
+		"/home/ygueron/work/169/HW0/single/rb7.rb",
+		"/home/ygueron/work/ToP/readme.md",
+		"/home/ygueron/work/169/readme.md",
+		"/home/ygueron/work/rottenpotatoes/app/models/movie.rb",
+		"/home/ygueron/work/169/vendor/cache/mail-2.5.4.gem",
+		"/home/ygueron/work/ruby_koans/src/about_message_passing.rb",
+		"/home/ygueron/work/rottenpotatoes/lib/tasks/cucumber.rake",
+		"/home/ygueron/work/169/Gemfile",
+		"/home/ygueron/.gitconfig",
+		"/home/ygueron/work/169/HW1/public/.rspec",
+		"/home/ygueron/work/169/HW1/Tests.rb",
+		"/home/ygueron/work/wallabag/inc/3rdparty/site_config/standard/ignoredbydinosaurs.com.txt",
+		"/home/ygueron/work/wallabag/inc/3rdparty/site_config/standard/igeneration.fr.txt",
+		"/home/ygueron/work/Shaarli/index.php",
+		"/home/ygueron/work/rottenpotatoes/Gemfile",
+		"/home/ygueron/work/wallabag/inc/3rdparty/site_config/standard/news-gazette.com.txt",
+		"/home/ygueron/work/ruby_koans/DEPLOYING",
+		"/home/ygueron/work/wallabag/inc/3rdparty/site_config/standard/brandingstrategyinsider.com.txt",
+		"/home/ygueron/work/wallabag/inc/3rdparty/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.Encoding.txt",
+		"/home/ygueron/work/wallabag/inc/3rdparty/libraries/Zend/Cache/Backend/ExtendedInterface.php",
+		"/home/ygueron/work/wallabag/inc/3rdparty/site_config/standard/penny-arcade.com.txt",
+		"/home/ygueron/work/ruby_koans/src/path_to_enlightenment.rb",
+		"/home/ygueron/work/ruby_koans/src/about_arrays.rb",
+		"/home/ygueron/work/Shaarli/tpl/addlink.html",
+		"/home/ygueron/work/rottenpotatoes/tmp/cache/assets/D5A/EA0/sprockets%2Fd771ace226fc8215a3572e0aa35bb0d6",
+		"/home/ygueron/work/wallabag/inc/3rdparty/htmlpurifier/HTMLPurifier/URIFilter/DisableExternal.php",
+		"/home/ygueron/work/wallabag/inc/3rdparty/site_config/standard/gulfnews.com.txt",
+		"/home/ygueron/work/wallabag/inc/3rdparty/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormat.PurifierLinkify.DocURL.txt",
+		"/home/ygueron/work/wallabag/inc/3rdparty/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Filter.ExtractStyleBlocks.Escaping.txt",
+		"/home/ygueron/work/wallabag/inc/3rdparty/libraries/humble-http-agent/RollingCurl.php",
+		"/home/ygueron/work/wallabag/robots.txt",
+		"/home/ygueron/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/ygueron/work/169/HW1/.idea/workspace.xml",
+		"/home/ygueron/work/HW0/single/rb7.rb",
+		"/media/ygueron/DOCS/BUREAUTIQUE/COURS_EDX_169-1/2. More Ruby/public/spec/rock_paper_scissors_spec.rb",
+		"/media/ygueron/DOCS/BUREAUTIQUE/COURS_EDX_169-1/2. More Ruby/public/lib/rock_paper_scissors.rb",
+		"/home/ygueron/work/169/HW0/.rspec",
+		"/home/ygueron/work/snippets/ruby/sig.rb",
+		"/home/ygueron/.config/sublime-text-3/Packages/User/SublimeXiki.sublime-settings",
+		"/home/ygueron/.config/sublime-text-3/Packages/SublimeXiki/SublimeXiki.sublime-settings",
+		"/home/ygueron/.config/sublime-text-3/Packages/PlainTasks/messages/Tutorial.todo",
+		"/home/ygueron/work/snippets/ruby/class-attr-public-initialize-private.sublime-snippet",
+		"/tmp/class-attr-public-initialize-private.sublime-snippet",
+		"/home/ygueron/Documents/reminders/irc.txt",
+		"/home/ygueron/work/HW0/lib/HW0part1.rb",
+		"/home/ygueron/work/HW0/spec/HW0part1_spec.rb",
+		"/home/ygueron/work/HW0/LICENSE",
+		"/home/ygueron/work/HW0/.rspec",
+		"/etc/bash.bashrc",
+		"/home/ygueron/.bash_profile"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"encode_",
+			"\n	",
+			"a[1][1]",
+			"a[0][1]",
+			"path",
+			"table",
+			")",
+			"(",
+			"'",
+			")",
+			"(",
+			")",
+			"(",
+			":pending",
+			"\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+			"d",
+			"def ",
+			"def",
+			"Def",
+			"def",
+			"Def",
+			"def"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"strat_p2",
+			"strat_p1",
+			"\"",
+			" , \"",
+			"\"",
+			"'",
+			", '",
+			"'",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/home/ygueron/bin/scripts"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/media/ygueron/DOCS/BUREAUTIQUE/COURS_EDX_169-1/oracle_of_bacon.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1608,
+								1608
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1452.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "shaarlyp.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								463
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1584.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"aawh",
+				"169/HW1/public/spec/attr_accessor_with_history_spec.rb"
+			],
+			[
+				"dessp",
+				"169/HW1/public/spec/dessert_spec.rb"
+			],
+			[
+				"dess",
+				"169/HW1/public/lib/dessert.rb"
+			],
+			[
+				"fwsp",
+				"169/HW1/public/spec/fun_with_strings_spec.rb"
+			],
+			[
+				"fun",
+				"169/HW1/public/lib/fun_with_strings.rb"
+			],
+			[
+				"rocksep",
+				"169/HW1/public/spec/rock_paper_scissors_spec.rb"
+			],
+			[
+				"sp1",
+				"spec/HW0part1_spec.rb"
+			],
+			[
+				"hw",
+				"lib/HW0part1.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 75.0,
+		"selected_items":
+		[
+			[
+				"get_pr",
+				"get_privacy"
+			]
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 272.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
