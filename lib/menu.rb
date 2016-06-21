@@ -1,35 +1,70 @@
 # encoding: utf-8
 
 =begin
+Author:       e-jambon
+Date:         2016/06/12
+Version:      0.2.
+Description:  Quick and dirty little tool.
+              Creates a menu to use in terminal.
+                * Untested.
+                * No support provided
+                * Not commented.
 
-Author        : Yann GUERON
-Date          : 2016/06/12
-Version       : 0.1.
-Description   : Little tool to require a copy of a template locally
-
-
+              USE AT YOUR OWN RISKS.
 =end
 
 class Menu
-  attr :menu_map, :current_level, :user_choice
+  attr :menu_map, :current_level, :user_choice, :title, :header
 
-  def initialize menu_map
-    STDERR.puts "DEPRECATED. Use menu_v2.rb"
+  def initialize menu_map, title
+    @title = title
     @current_directory = %x`pwd`
     @current_level = '0'
     @menu_map =  menu_map
+    make_title
+  end
+
+
+
+  def make_title
+    ctl = '┏'
+    ctr = '┓'
+    ch= '━'
+    cbl = '┗'
+    cbr= '┛'
+    cv = '┃'
+
+    length = @title.length
+    spaces = length%2 == 0 ?  76 - length : 75 - length
+
+    top_L = bottom_L = horizontal_L = title_L = empty_L = ""
+    (length+spaces).times {horizontal_L += ch}
+    top_L = ctl + horizontal_L + ctr
+    bottom_L = cbl + horizontal_L + cbr
+
+    (length+spaces).times {empty_L += " "}
+    empty_L = cv + empty_L + cv
+    title_L = cv + " "*(spaces/2) + @title + " "*(spaces/2) + cv
+
+    @header = top_L + "\n" +
+              empty_L + "\n" +
+              title_L + "\n" +
+              empty_L + "\n" +
+              bottom_L + "\n\n"
   end
 
 
   def print_menu_header menu_level, title = "MENU -- MAKE A CHOICE"
     system('clear')
-    puts "-------------------------------------------------\n"+
-         "|                                               |\n"+
-         "|  "+ title + "                        |\n"+
-         "|                                               |\n"+
-         "-------------------------------------------------\n"+
-         " LEVEL : #{menu_level}\n\n"
+    puts @header
   end
+
+  def footer
+    puts "\n X or x to quit / j or <- to previous menu"
+    puts "  Your choice"
+  end
+
+
 
   # print the menu content on screen
   def print_menu menu_level= '0'
@@ -97,3 +132,79 @@ class Menu
   end
 
   end
+
+
+
+##############################
+#
+#     USAGE EXAMPLE
+#
+#
+##############################
+=begin (menu_example.rb)
+#!/usr/bin/env ruby
+#encoding = utf-8
+require_relative './lib/menu'   # therefore, must be in /lib'parent folder.
+
+
+
+
+#MENU example
+#            In case you wonder, it's in french
+#            '0.1' is the menu level
+#            followed by an array containing 2 items :
+#            [0] the menu Description
+#            [1] the command the system must execute
+#side note : this one was done on Mac-OSx.
+MENU={
+              #NIVEAU PRINCIPAL
+              '0.1' => ["Utilitaires"],
+              '0.2' => ["Mon Web"],
+              '0.3' => ["Organisation"],
+              '0.4' => ["Communication"],
+              '0.5' => ["Programmation"],
+              '0.6' => ["Loisirs"],
+              '0.7' => ["Autre"],
+
+              # Utilitaires
+              '0.1.1' => ["Atom.io localement", "atom ."],
+              '0.1.2' => ["Cyberduck", "open -g /Applications/Cyberduck.app"],
+              '0.1.3' => ["No Machine","open -g /Applications/NoMachine.app"],
+              '0.1.4' => ["Autre","echo 'Pas encore implémenté'"],
+
+              # Mon Web
+              '0.2.1' => ["Editeur sur e-jambon.com", "atom ~/Documents/localweb/e-jambon.com"],
+              '0.2.2' => ["Blog Jambon","open -g http://ici.e-jambon.com"],
+              '0.2.3' => ["Liens","open -g http://links.e-jambon.com"],
+              '0.2.4' => ["RSS", 'open -g http://kriss.e-jambon.com'],
+              '0.2.5' => ["WIKI", 'open -g http://wiki.e-jambon.com'],
+
+
+
+              # Organisation
+              '0.3.1' => ["Trello", "open -g https://trello.com"],
+              '0.3.3' => ["Freemind", "open -g /Applications/FreeMind.app/"],
+
+              # Communication
+              '0.4.4' => ["XChat","open '/Applications/XChat Azure.app/'"],
+
+              # Programmation
+              '0.5.1' => ["Docker kinematic", "open -g '/Applications/Docker/Kitematic (Beta).app/'"],
+              '0.5.2' => ["Dash", "open -g '/Applications/Docker/Dash.app/'"],
+              '0.5.3' => ["Github Desktop", "open -g '/Applications/GitHub Desktop.app/'"],
+              '0.5.4' => ["Terminal iterm", "open -g '/Applications/iTerm.app'" ],
+
+
+              # Loisirs
+              '0.6.1' => ["Calibre/lecture", "open -g '/Applications/calibre.app'"],
+              '0.6.2' => ["Krita/dessin", "open -g '/Applications/Krita.app'"],
+              '0.6.3' => ["Mypaint", 'open -g /Applications/MyPaint.app'],
+
+              # Autre
+              '0.7.1' => ["OBS capture video", "open '/Applications/OBS.app'"],
+            }
+
+mymenu = Menu.new(MENU, "This is my another  title")
+mymenu.main
+
+=end

@@ -35,6 +35,6 @@ array_to_csv_file './decceleration.csv', @d
 @a_read = csv_file_to_array './acceleration.csv'
 @b_read = csv_file_to_array './decceleration.csv'
 
-puts "@a === @a_read = #{@a === @a_read} (should be false) .  @a_read =#{@a_read}"
+puts "@a === @a_read = #{@a === @a_read} (should be false).  @a_read =#{@a_read}"
 puts "@b === @b_read = #{@b === @b_read} (should be false).  @b_read =#{@b_read}"
 =end
