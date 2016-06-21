@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /Users/ygueron/Documents/localweb/e-jambon.com/blog
+bundle exec jekyll serve --incremental
+
